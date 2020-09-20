@@ -19,9 +19,4 @@ RUN /bin/bash -c "source activate conda3.6 && conda install pytorch torchvision 
 RUN /bin/bash -c "source activate conda3.6 && conda install -c conda-forge matplotlib seaborn"
 RUN /bin/bash -c "source activate conda3.6 && conda install -c anaconda -c conda-forge -c comet_ml comet_ml"
 
-COPY run.sh run.sh
-RUN chmod ouga+x run.sh
-
-EXPOSE 8888
-
-ENTRYPOINT ["./run.sh"]
+ENTRYPOINT [ "executable" ]
