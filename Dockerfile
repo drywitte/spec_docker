@@ -15,7 +15,7 @@ RUN conda update conda
 RUN conda create -n conda3.6 python=3.6
 
 RUN /bin/bash -c "source activate conda3.6 && conda install mkl numpy pandas jupyter ipython scikit-learn plotly"
-RUN /bin/bash -c "source activate conda3.6 && conda install pytorch torchvision -c pytorch"
+RUN /bin/bash -c "source activate conda3.6 && conda install pytorch torchvision cudatoolkit -c pytorch"
 RUN /bin/bash -c "source activate conda3.6 && conda install -c conda-forge matplotlib seaborn"
 RUN /bin/bash -c "source activate conda3.6 && conda install -c anaconda -c conda-forge -c comet_ml comet_ml"
 
