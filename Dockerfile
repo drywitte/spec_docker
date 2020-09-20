@@ -9,7 +9,7 @@ RUN wget https://repo.continuum.io/miniconda/Miniconda3-3.7.0-Linux-x86_64.sh -O
 RUN chmod ouga+xw ./miniconda.sh
 RUN bash ./miniconda.sh -b -p ./miniconda
 
-RUN export PATH=/opt/conda/bin:$PATH
+ENV PATH=/opt/conda/bin:$PATH
 
 RUN conda update conda
 RUN conda create -n conda3.6 python=3.6
