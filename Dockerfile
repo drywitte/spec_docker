@@ -21,4 +21,4 @@ RUN /bin/bash -c "source activate conda3.6 && conda install -c anaconda -c conda
 
 RUN source activate conda3.6
 
-ENTRYPOINT [ "executable" ]
+ENTRYPOINT [ "executable", "python", "conda" ]
