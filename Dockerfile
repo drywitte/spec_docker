@@ -18,8 +18,8 @@ RUN /bin/bash -c "source activate conda3.6 && conda install mkl numpy pandas jup
 RUN /bin/bash -c "source activate conda3.6 && conda install pytorch==1.5.1 torchvision==0.6.1 cudatoolkit=10.2 -c pytorch"
 RUN /bin/bash -c "source activate conda3.6 && conda install -c conda-forge matplotlib seaborn"
 RUN /bin/bash -c "source activate conda3.6 && conda install -c anaconda -c conda-forge -c comet_ml comet_ml"
-RUN /bin/bash -c "source activate conda3.6 && conda install -c conda yaml"
+RUN /bin/bash -c "source activate conda3.6 && conda install pyyaml"
 
-RUN /bin/bash -c "source activate conda3.6"
+CMD /bin/bash -c "source activate conda3.6"
 
 ENTRYPOINT [ "executable", "python", "conda" ]
