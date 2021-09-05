@@ -20,6 +20,7 @@ RUN /bin/bash -c "source activate conda3.6 && conda install -c conda-forge matpl
 RUN /bin/bash -c "source activate conda3.6 && conda install -c anaconda -c conda-forge -c comet_ml comet_ml"
 RUN /bin/bash -c "source activate conda3.6 && conda install pyyaml yaml"
 RUN /bin/bash -c "conda install -c menpo opencv3"
+RUN /bin/bash -c "pip install --upgrade pip"
 RUN /bin/bash -c "python3 -m pip install netifaces"
 
 
