@@ -3,6 +3,7 @@ FROM ubuntu:18.04
 WORKDIR /opt/pytorch
 
 RUN apt -y update && apt -y install wget curl vim libgcrypt20 coreutils libgl1-mesa-glx
+RUN sudo apt install build-essential
 
 RUN wget https://repo.continuum.io/miniconda/Miniconda3-3.7.0-Linux-x86_64.sh -O ./miniconda.sh
 
@@ -20,7 +21,6 @@ RUN /bin/bash -c "source activate conda3.6 && conda install -c conda-forge matpl
 RUN /bin/bash -c "source activate conda3.6 && conda install -c anaconda -c conda-forge -c comet_ml comet_ml"
 RUN /bin/bash -c "source activate conda3.6 && conda install pyyaml yaml"
 RUN /bin/bash -c "conda install -c menpo opencv3"
-RUN /bin/bash -c "pip install --upgrade pip"
 RUN /bin/bash -c "python3 -m pip install netifaces"
 
 
