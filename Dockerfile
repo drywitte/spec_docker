@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 WORKDIR /opt/pytorch
 
 RUN apt -y update && apt -y install wget curl vim libgcrypt20 coreutils libgl1-mesa-glx
-RUN apt -y install build-essential
+# RUN apt -y install build-essential
 
 RUN wget https://repo.continuum.io/miniconda/Miniconda3-3.7.0-Linux-x86_64.sh -O ./miniconda.sh
 
